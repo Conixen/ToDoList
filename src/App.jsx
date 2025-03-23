@@ -4,22 +4,26 @@ import ToDoInput from './Components/ToDoInput';
 import './App.css';
 
 function App() {
-  const [toDo, setToDo] = useState([]);
+  const [toDo, setToDo] = useState(() => {
+    const savedTodos = localStorage.getItem("toDo");
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
 
   const newToDo = (text) => {
-    setToDo([...toDo, { id: Date.now(), text, isDone: false }]);
+    const updatedTodos = [...toDo, { id: Date.now(), text, isDone: false }];
+    setToDo(updatedTodos);
   };
 
   const removeToDo = (id) => {
-    setToDo(toDo.filter((toDo) => toDo.id !== id));
+    const updatedTodos = toDo.filter((todo) => todo.id !== id);
+    setToDo(updatedTodos);
   };
 
   const isDone = (id) => {
-    setToDo(
-      toDo.map((toDo) =>
-        toDo.id === id ? { ...toDo, isDone: !toDo.isDone } : toDo
-      )
+    const updatedTodos = toDo.map((todo) =>
+      todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
     );
+    setToDo(updatedTodos);
   };
 
   useEffect(() => {
