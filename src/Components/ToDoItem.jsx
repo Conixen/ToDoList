@@ -12,7 +12,7 @@ function ToDoItem({ newToDo, removeToDo, isDone }) {
       >
         {newToDo.text}
       </span>
-      <button onClick={() => removeToDo(newToDo.id)}>❌</button>
+      <button onClick={() => removeToDo(newToDo.id)}>✖</button>
     </li>
   );
 }
