@@ -36,12 +36,19 @@ function App() {
   }, [toDo]);
 
   return (
-    <div className='to-do-app'>
+    <div className="to-do-app">
       <h1>Min To-do lista</h1>
-      <ToDoInput newToDo={newToDo} />
-      <ToDoList toDo={toDo} removeToDo={removeToDo} isDone={isDone} />
+      <div className="app-container">
+        <div className="input-section">
+          <ToDoInput newToDo={newToDo} />
+        </div>
+        <div className="todo-list-section">
+          <ToDoList toDo={toDo} removeToDo={removeToDo} isDone={isDone} />
+        </div>
+      </div>
     </div>
   );
+  
 }
 
 export default App;

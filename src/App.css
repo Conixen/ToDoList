@@ -1,28 +1,126 @@
-.app {
-  text-align: center;
-  font-family: Arial, sans-serif;
+/* Grundläggande styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgb(8,8,36)0%,
+    rgba(36,36,119,0.76) 45%,
+    rgba(102,146,155) 100%
+    );
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* Huvudcontainer */
+.to-do-app {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logotyp och rubrik */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Layout: Input-fält på vänster sida, To-Do lista på höger sida */
+.app-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Input-sektion */
+.input-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Input-fält */
+input {
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Lägg till-knapp */
+.AddToList {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.AddToList:hover {
+  background-color: #218838;
+}
+
+/* To-Do List-sektion */
+.todo-list-section {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Lista */
 ul {
   list-style: none;
   padding: 0;
 }
 
+/* Varje To-Do Item */
 li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  background: #ffffff;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-button {
-  background: none;
-  border: none;
+/* Text på varje To-Do */
+li span {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1rem;
+}
+
+/* Om To-Do är färdig (linje över texten) */
+li span.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Ta bort-knapp */
+button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-  color: red;
+  background-color: #c82333;
 }
