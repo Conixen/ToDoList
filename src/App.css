@@ -32,13 +32,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Layout: Input-fält på vänster sida, To-Do lista på höger sida */
 .app-container {
   display: flex;
   justify-content: space-between;
 }
 
-/* Input-sektion */
 .input-section {
   flex: 1;
   padding: 20px;
@@ -47,7 +45,6 @@ h1 {
   align-items: flex-start;
 }
 
-/* Input-fält */
 input {
   width: 90%;
   padding: 10px;
@@ -57,7 +54,6 @@ input {
   margin-bottom: 10px;
 }
 
-/* Lägg till-knapp */
 .AddToList {
   background-color: #28a745;
   color: white;
@@ -73,7 +69,7 @@ input {
   background-color: #218838;
 }
 
-/* To-Do List-sektion */
+/* To-Do List */
 .todo-list-section {
   flex: 1;
   padding: 20px;
@@ -85,7 +81,6 @@ ul {
   padding: 0;
 }
 
-/* Varje To-Do Item */
 li {
   display: flex;
   align-items: center;
@@ -109,7 +104,6 @@ li span.done {
   color: #888;
 }
 
-/* Ta bort-knapp */
 button {
   background-color: #dc3545;
   color: white;

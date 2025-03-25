@@ -10,7 +10,7 @@ function ToDoItem({ newToDo, removeToDo, isDone }) {
           cursor: "pointer",
         }}
       >
-        {newToDo.text}
+        {newToDo.text} {/* Display the task text */}
       </span>
       <button onClick={() => removeToDo(newToDo.id)}>✖</button>
     </li>

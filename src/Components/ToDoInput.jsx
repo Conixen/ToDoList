@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 function ToDoInput({ newToDo }) {
     const [text, setText] = useState("");
+    // Create a state variable to store the input text
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent page reload
         if (!text.trim()) return;
         newToDo(text);
         setText(""); 
